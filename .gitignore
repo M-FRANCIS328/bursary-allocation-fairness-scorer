@@ -1,0 +1,21 @@
+# Compiled classes
+out/
+*.class
+
+# Secrets and live data (never commit)
+mail.properties
+users.csv
+applicants.csv
+activity.log
+contacts.properties
+outbox.txt
+applicants-old-format.csv
+uploads/
+
+# Older duplicate copy of the project
+BURSARY ALLOCATION FAIRNESS SCORER/
+
+# Editor / OS
+.vscode/
+Thumbs.db
+.DS_Store

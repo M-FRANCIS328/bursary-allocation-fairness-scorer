@@ -1,0 +1,12 @@
+# Copy this file to mail.properties and fill it in to send real emails.
+# Leave these empty and codes are written to outbox.txt instead (test mode).
+#
+# Example for Gmail: host=smtp.gmail.com, port=465, user=your address,
+# password=a 16-character Google App Password (your normal Gmail password will not work).
+# Keep mail.properties private: it is listed in .gitignore.
+host=
+port=465
+user=
+password=
+# Address shown as the sender (leave empty to use the same as user)
+from=

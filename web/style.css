@@ -1,0 +1,214 @@
+/* KIU colours used across the whole page */
+:root { --green: #2fb457; --dark: #1c7a3a; --ink: #1f2a24; --soft: #f3f7f4; --line: #dfe7e2; }
+/* page background, font and text colour */
+body { margin: 0; font-family: "Segoe UI", Arial, sans-serif; color: var(--ink); background: var(--soft); }
+/* white top bar holding the KIU logo and the title */
+header { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; background: #fff; padding: 14px 32px; border-bottom: 4px solid var(--green); }
+/* logo size */
+header img { height: 62px; }
+/* application title */
+h1 { margin: 0; font-size: 22px; color: var(--dark); }
+/* KIU motto under the title */
+header p.motto { margin: 4px 0 0; font-size: 13px; font-weight: 600; font-style: italic; letter-spacing: 2px; text-transform: uppercase; color: var(--green); }
+/* centred content column */
+main { max-width: 1560px; margin: 24px auto; padding: 0 16px; }
+/* white panel around each section */
+.card { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 20px 24px; margin-bottom: 22px; box-shadow: 0 1px 3px rgba(0,0,0,.05); }
+/* section heading with a green marker */
+h2 { margin: 0 0 16px; font-size: 16px; color: var(--dark); border-left: 4px solid var(--green); padding-left: 10px; }
+/* form fields arranged in tidy columns */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px 18px; }
+/* small caption above each field */
+label { font-size: 12px; font-weight: 600; color: #4a5a51; }
+/* text boxes and drop-downs */
+input:not([type=checkbox]), select { display: block; width: 100%; box-sizing: border-box; margin-top: 5px; padding: 9px 10px; font-size: 14px; border: 1px solid #c4d0c9; border-radius: 6px; }
+/* green outline on the field being edited */
+input:focus, select:focus { outline: 2px solid var(--green); border-color: var(--green); }
+/* row of verification tick boxes and the toolbar */
+.row { display: flex; flex-wrap: wrap; align-items: end; gap: 12px 22px; margin-top: 16px; }
+/* tick box labels sit beside their box */
+.row label.tick { font-size: 14px; font-weight: 400; color: var(--ink); }
+/* green action buttons and the audit link */
+button, .btn { background: var(--green); color: #fff; border: 0; border-radius: 6px; padding: 10px 20px; font-size: 14px; font-weight: 600; cursor: pointer; text-decoration: none; }
+/* darker green when the pointer is over a button */
+button:hover, .btn:hover { background: var(--dark); }
+/* outlined style for the secondary audit button */
+.btn.alt { background: #fff; color: var(--dark); border: 1px solid var(--green); }
+/* summary figures above the ranking */
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 14px; margin: 18px 0; }
+/* one summary figure */
+.tile { background: var(--soft); border-radius: 8px; padding: 12px 16px; border-left: 4px solid var(--green); }
+/* the big number inside a summary figure */
+.tile b { display: block; font-size: 22px; color: var(--dark); }
+/* the caption inside a summary figure */
+.tile span { font-size: 12px; color: #5c6b63; }
+/* lets a wide table scroll sideways on small screens */
+.scroll { overflow-x: auto; }
+/* ranking table */
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+/* green header row */
+th { background: var(--dark); color: #fff; text-align: left; padding: 10px; font-size: 12px; white-space: nowrap; }
+/* table cells */
+td { padding: 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+/* light stripe on every second row */
+tr:nth-child(even) td { background: #f8fbf9; }
+/* applicant reference and name stay on one line */
+td:nth-child(2), small { white-space: nowrap; }
+/* numbers line up on the right */
+td.n { text-align: right; white-space: nowrap; }
+/* total score shown as a green pill */
+.total { display: inline-block; background: var(--green); color: #fff; font-weight: 700; padding: 3px 10px; border-radius: 12px; }
+/* decision labels */
+.tag { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+/* funded label */
+.ok { background: #dff5e6; color: var(--dark); }
+/* not funded label */
+.no { background: #fde8e6; color: #a3261b; }
+/* label shown before a budget is set */
+.wait { background: #eceff1; color: #55616a; }
+/* stated reason text */
+.why { font-size: 12.5px; line-height: 1.5; color: #44524a; min-width: 340px; }
+/* message shown when there are no applicants */
+.empty { text-align: center; color: #6b7a72; padding: 28px; }
+/* signed-in user's name and sign-out button, pushed to the right of the top bar */
+.user { margin-left: auto; display: flex; align-items: center; gap: 12px; font-size: 13px; color: #4a5a51; }
+/* compact buttons used for sign out and saving ticks */
+button.small { padding: 6px 12px; font-size: 12px; }
+/* sign-in and registration cards side by side */
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; max-width: 900px; margin: 0 auto; }
+/* fields stacked one under another inside those cards */
+.stack label { display: block; margin-bottom: 14px; }
+/* small grey helper text */
+.hint { font-size: 12.5px; color: #5c6b63; margin: 14px 0 0; }
+/* message banner shown after an action */
+.msg { max-width: 900px; margin: 0 auto 18px; padding: 11px 16px; border-radius: 8px; font-size: 14px; font-weight: 600; }
+/* success banner */
+.msg.good { background: #dff5e6; color: var(--dark); }
+/* error banner */
+.msg.bad { background: #fde8e6; color: #a3261b; }
+/* the three document ticks an administrator saves per application */
+.checks { display: grid; gap: 5px; min-width: 130px; }
+/* tick labels inside that form */
+.checks label.tick { font-size: 12.5px; font-weight: 400; white-space: nowrap; }
+/* numbered list of bursary requirements */
+.req { margin: 0; padding-left: 22px; font-size: 14px; line-height: 1.8; }
+/* links such as "view upload" */
+a { color: var(--dark); font-weight: 600; }
+/* one tick and its "view" link kept on a single line */
+.checks span { white-space: nowrap; font-size: 12.5px; }
+/* small headings that group the application form */
+h3 { margin: 20px 0 10px; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #5c6b63; }
+/* feedback box an administrator types into */
+textarea { width: 100%; min-width: 190px; box-sizing: border-box; padding: 8px; font: inherit; font-size: 12.5px; border: 1px solid #c4d0c9; border-radius: 6px; }
+/* feedback card on the student's page */
+.note { border-left: 5px solid var(--green); background: #f3fbf5; }
+/* the feedback message itself */
+.note p { margin: 0; font-size: 15px; line-height: 1.6; }
+/* page footer */
+footer { text-align: center; font-size: 12px; color: #6b7a72; padding: 10px 0 26px; }
+/* administrator sign-in card, darker so it is not mistaken for the student one */
+.staff { background: #173d27; border-color: #173d27; }
+/* its heading, labels and note in light colours */
+.staff h2, .staff label, .staff .hint { color: #e6f4ea; }
+/* its heading marker and button in a lighter green */
+.staff h2 { border-left-color: #7fdc9b; }
+/* "Administrators" and "Students" headings above each pair of cards on the first page */
+h2.group { max-width: 900px; margin: 6px auto 12px; border: 0; padding: 0; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; color: #5c6b63; }
+/* space between the administrator pair and the student heading */
+.cols + h2.group { margin-top: 10px; }
+/* first page: description on the left, one sign-in card on the right, all on one screen */
+.welcome { display: grid; grid-template-columns: 1fr minmax(320px, 440px); gap: 28px; max-width: 1040px; margin: 0 auto; align-items: stretch; }
+/* dark green description panel */
+.hero { background: linear-gradient(160deg, #1c7a3a, #123d24); color: #fff; border-radius: 12px; padding: 34px 32px; }
+/* its headline */
+.hero h2 { border: 0; padding: 0; margin: 0 0 12px; font-size: 26px; line-height: 1.25; color: #fff; }
+/* its paragraph and list */
+.hero p, .hero ul { font-size: 14.5px; line-height: 1.7; color: #dff3e5; margin: 0 0 12px; padding-left: 0; }
+/* list of documents to prepare, with green tick marks */
+.hero ul { list-style: none; } .hero li::before { content: "\2713\00a0\00a0"; color: #7fdc9b; font-weight: 700; }
+/* the sign-in card itself */
+.auth { margin: 0; padding: 22px 24px; } .auth .msg { margin: 0 0 14px; font-size: 13px; }
+/* the radio buttons that drive the switches stay invisible */
+.auth > input[type=radio] { display: none; }
+/* a two-button switch */
+.seg { display: grid; grid-template-columns: 1fr 1fr; background: var(--soft); border-radius: 8px; padding: 4px; margin-bottom: 10px; }
+/* one side of a switch */
+.seg label { text-align: center; padding: 9px 6px; border-radius: 6px; font-size: 13.5px; cursor: pointer; color: #4a5a51; }
+/* the chosen side of each switch turns green */
+#w-a:checked ~ .who label[for=w-a], #w-s:checked ~ .who label[for=w-s], #m-i:checked ~ .mode label[for=m-i], #m-u:checked ~ .mode label[for=m-u] { background: var(--green); color: #fff; }
+/* all four forms are hidden until chosen */
+.panel { display: none; margin-top: 16px; } .panel.stack label { margin-bottom: 11px; } .panel button { width: 100%; }
+/* show the one form that matches both switches */
+#w-a:checked ~ #m-i:checked ~ .p-ai, #w-a:checked ~ #m-u:checked ~ .p-au, #w-s:checked ~ #m-i:checked ~ .p-si, #w-s:checked ~ #m-u:checked ~ .p-su { display: block; }
+/* on narrow screens the description goes above the card */
+@media (max-width: 760px) { .welcome { grid-template-columns: 1fr; } .hero { padding: 22px; } }
+/* KIU giraffe watermark: sits faintly in the bottom-right corner of every page, like a mark in paper */
+body::after { content: ""; position: fixed; right: 18px; bottom: 0; width: min(34vw, 420px); height: min(62vh, 480px); background: url(/giraffe.png) no-repeat right bottom / contain; opacity: .07; pointer-events: none; z-index: 5; }
+/* a soft green glow in the page background so the corner with the giraffe feels intentional */
+body { background: radial-gradient(900px 600px at 100% 100%, #dff1e4 0%, var(--soft) 60%) fixed; }
+/* the same giraffe in white inside the green welcome panel on the first page */
+.hero { position: relative; overflow: hidden; }
+/* the white giraffe itself, drawn in the bottom-right corner of that panel */
+.hero::after { content: ""; position: absolute; right: -10px; bottom: -6px; width: 210px; height: 240px; background: url(/giraffe.png) no-repeat right bottom / contain; filter: brightness(0) invert(1); opacity: .13; pointer-events: none; }
+/* on phones the watermark is smaller so it never crowds the forms */
+@media (max-width: 760px) { body::after { width: 46vw; height: 34vh; opacity: .05; } }
+/* "About KIU" strip under the sign-in area on the first page */
+.about { max-width: 1040px; margin: 22px auto 0; }
+/* its heading and one-line description */
+.about h2 { margin-bottom: 6px; } .about p { margin: 0 0 4px 14px; font-size: 13.5px; color: #4a5a51; }
+/* its fact tiles: white so they stand out on the page background, with smaller figures */
+.about .tiles { margin: 12px 0 0; } .about .tile { background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--green); } .about .tile b { font-size: 18px; }
+/* a password box and the Show/Hide button that sits inside its right edge */
+.pwbox { position: relative; } input.pw { padding-right: 44px; }
+/* the show/hide eye button itself: small, plain, green icon */
+button.peek { position: absolute; right: 6px; bottom: 4px; width: auto !important; padding: 5px 7px; line-height: 0; background: transparent; color: var(--dark); }
+/* a light tint when the pointer is over it */
+button.peek:hover { background: #e3f3e8; }
+/* course box: one compact line with its own up and down arrows, like a number box */
+select.step { appearance: none; -webkit-appearance: none; padding-right: 36px; text-overflow: ellipsis; }
+/* the pair of arrows inside the right edge of the course box */
+.stepper { position: absolute; right: 5px; bottom: 3px; display: grid; gap: 1px; }
+/* one arrow: small and plain */
+.stepper button { width: auto !important; height: 15px; padding: 0 7px; font-size: 8px; line-height: 15px; border-radius: 3px; background: transparent; color: #5c6b63; }
+/* green tint when the pointer is over an arrow */
+.stepper button:hover { background: #e3f3e8; color: var(--dark); }
+/* the "Add a new course" name box is wide enough to read a full course name */
+.row input[name=name] { min-width: 360px; }
+/* typed course box: room for the arrows, and no extra browser drop-down marker beside them */
+input.step { padding-right: 36px; } input.step::-webkit-calendar-picker-indicator { display: none !important; }
+/* the course name box in the courses card is wide enough for a full course name */
+.row input.step { min-width: 460px; }
+/* small red text, e.g. an outdated recommendation */
+small.bad { color: #a3261b; font-weight: 600; }
+/* outlined "Decline" button beside "Approve" */
+button.alt { background: #fff; color: #a3261b; border: 1px solid #a3261b; } button.alt:hover { background: #fde8e6; }
+/* the award letter: readable width and a plain table */
+.letter { max-width: 760px; margin: 0 auto 22px; font-size: 15px; line-height: 1.6; } .letter table { margin: 10px 0 16px; }
+/* when printed, only the award letter shows */
+@media print { header form, footer, .letter .row, body::after { display: none; } .letter { border: 0; box-shadow: none; } }
+/* helper text inside a green note card stays small */
+.note p.hint, .note ul.hint { font-size: 12.5px; }
+/* payment status words beside a slip number: green when confirmed, red otherwise */
+span.good { color: var(--dark); font-weight: 600; } span.bad { color: #a3261b; font-weight: 600; }
+/* "Set a new password" box and button on one line inside the accounts table */
+td form.row { margin-top: 0; flex-wrap: nowrap; align-items: center; } label.pwset { flex: 1; min-width: 200px; } label.pwset input { margin-top: 0; }
+/* folded record of events in the audit table */
+details summary { cursor: pointer; color: var(--dark); font-weight: 600; }
+/* "Loading page..." overlay: hidden until a form is sent or a link is followed */
+#loading { position: fixed; inset: 0; z-index: 100; display: none; flex-direction: column; align-items: center; justify-content: center; gap: 12px; background: rgba(255,255,255,.72); }
+/* shown */
+#loading.on { display: flex; }
+/* the spinning ring: grey track with a green arc */
+#loading .spin { width: 38px; height: 38px; border: 4px solid #d6ded9; border-top-color: var(--green); border-radius: 50%; animation: spin .8s linear infinite; }
+/* the words under it */
+#loading b { font-size: 15px; color: var(--ink); }
+/* one full turn of the ring */
+@keyframes spin { to { transform: rotate(360deg); } }
+/* slower turn for people who ask for less motion */
+@media (prefers-reduced-motion: reduce) { #loading .spin { animation-duration: 2.4s; } }
+/* never printed on an award letter */
+@media print { #loading { display: none !important; } }
+/* "Contact us" card: the two offices side by side, one under the other on phones */
+.cols2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 6px 28px; }
+/* each contact line */
+.contacts p { margin: 4px 0; font-size: 14px; } .contacts h3 { margin-top: 4px; }
